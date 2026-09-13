@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Cursos | Instituto X</title>
+  <link rel="stylesheet" href="estiloIA.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-brand">Instituto <span>X</span></a>
+      <ul class="navbar-links">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html" class="activo">Catálogo de Cursos</a></li>
+        <li><a href="contacto.html">Información de Contacto</a></li>
+        <li><a href="mantenimiento.html">Información de Mantenimiento</a></li>
+      </ul>
+    </div>
+  </nav>
+  <div class="espaciador-navbar"></div>
+
+  <main>
+    <h1>Catálogo de Cursos</h1>
+    <p>
+      Seleccione una categoría para desplegar los cursos disponibles. Cada curso indica su nivel
+      y ofrece un enlace de descarga al programa correspondiente en formato PDF.
+    </p>
+
+    <!-- Categoría: Inglés -->
+    <details class="selector-categoria" open>
+      <summary>Inglés</summary>
+      <div class="panel-cursos">
+        <div class="grilla-cursos">
+
+          <article class="caja-curso">
+            <div>
+              <h3>Inglés Principiante</h3>
+              <span class="nivel">Principiante</span>
+            </div>
+            <a class="enlace-programa" href="programas/ingles_principiante.pdf" download>enlace al programa</a>
+          </article>
+
+          <article class="caja-curso">
+            <div>
+              <h3>Inglés Intermedio</h3>
+              <span class="nivel">Intermedio</span>
+            </div>
+            <a class="enlace-programa" href="programas/ingles_intermedio.pdf" download>enlace al programa</a>
+          </article>
+
+          <article class="caja-curso">
+            <div>
+              <h3>Inglés Avanzado</h3>
+              <span class="nivel">Avanzado</span>
+            </div>
+            <a class="enlace-programa" href="programas/ingles_avanzado.pdf" download>enlace al programa</a>
+          </article>
+
+        </div>
+      </div>
+    </details>
+
+    <!-- Categoría: Francés -->
+    <details class="selector-categoria">
+      <summary>Francés</summary>
+      <div class="panel-cursos">
+        <div class="grilla-cursos">
+
+          <article class="caja-curso">
+            <div>
+              <h3>Francés Principiante</h3>
+              <span class="nivel">Principiante</span>
+            </div>
+            <a class="enlace-programa" href="programas/frances_principiante.pdf" download>enlace al programa</a>
+          </article>
+
+          <article class="caja-curso">
+            <div>
+              <h3>Francés Intermedio</h3>
+              <span class="nivel">Intermedio</span>
+            </div>
+            <a class="enlace-programa" href="programas/frances_intermedio.pdf" download>enlace al programa</a>
+          </article>
+
+          <article class="caja-curso">
+            <div>
+              <h3>Francés Avanzado</h3>
+              <span class="nivel">Avanzado</span>
+            </div>
+            <a class="enlace-programa" href="programas/frances_avanzado.pdf" download>enlace al programa</a>
+          </article>
+
+        </div>
+      </div>
+    </details>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Instituto X &mdash; Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

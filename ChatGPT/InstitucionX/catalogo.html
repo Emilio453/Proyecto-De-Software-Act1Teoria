@@ -1,0 +1,256 @@
+<!DOCTYPE html> <html lang="es"> <head> <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Catálogo de Cursos - Institución X</title> <link rel="stylesheet" href="estiloIA.css"> </head> <body>
+<header>
+    <nav class="navbar">
+
+        <div class="logo">
+            Institución X
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="catalogo.html">Catálogo de Cursos</a></li>
+            <li><a href="contacto.html">Información de Contacto</a></li>
+            <li><a href="mantenimiento.html">Información de Mantenimiento</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<main class="pagina">
+
+    <section class="encabezado-pagina">
+
+        <h1>Catálogo de Cursos</h1>
+
+        <p>
+            Consulte nuestra propuesta académica de cursos de Inglés
+            y Francés. Seleccione una de las categorías para visualizar
+            los cursos disponibles.
+        </p>
+
+    </section>
+
+
+    <!--
+        Selector de categorías.
+        No utiliza JavaScript.
+        CSS utiliza :checked para mostrar el contenido correspondiente.
+    -->
+
+    <section class="selector-categoria">
+
+        <h2>Seleccione una categoría</h2>
+
+        <div class="opciones-categoria">
+
+            <input
+                type="radio"
+                id="opcion-ingles"
+                name="categoria"
+                checked
+            >
+
+            <label for="opcion-ingles">
+                Inglés
+            </label>
+
+
+            <input
+                type="radio"
+                id="opcion-frances"
+                name="categoria"
+            >
+
+            <label for="opcion-frances">
+                Francés
+            </label>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CATÁLOGO DE INGLÉS
+         ============================== -->
+
+    <section id="catalogo-ingles" class="catalogo-categoria">
+
+        <div class="titulo-categoria">
+            <h2>Inglés</h2>
+
+            <p>
+                Cursos de idioma inglés correspondientes a los niveles
+                principiante, intermedio y avanzado.
+            </p>
+        </div>
+
+
+        <div class="contenedor-cursos">
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Principiante</span>
+
+                <h3>Inglés Principiante</h3>
+
+                <p>
+                    Curso introductorio destinado a estudiantes que
+                    comienzan su formación en el idioma inglés.
+                </p>
+
+                <a
+                    href="programas/ingles-principiante.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Intermedio</span>
+
+                <h3>Inglés Intermedio</h3>
+
+                <p>
+                    Curso orientado al desarrollo y consolidación de
+                    competencias comunicativas de nivel intermedio.
+                </p>
+
+                <a
+                    href="programas/ingles-intermedio.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Avanzado</span>
+
+                <h3>Inglés Avanzado</h3>
+
+                <p>
+                    Curso destinado a estudiantes con conocimientos
+                    consolidados que desean profundizar su dominio
+                    del idioma.
+                </p>
+
+                <a
+                    href="programas/ingles-avanzado.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- ==============================
+         CATÁLOGO DE FRANCÉS
+         ============================== -->
+
+    <section id="catalogo-frances" class="catalogo-categoria">
+
+        <div class="titulo-categoria">
+            <h2>Francés</h2>
+
+            <p>
+                Cursos de idioma francés correspondientes a los niveles
+                principiante, intermedio y avanzado.
+            </p>
+        </div>
+
+
+        <div class="contenedor-cursos">
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Principiante</span>
+
+                <h3>Francés Principiante</h3>
+
+                <p>
+                    Curso introductorio destinado a estudiantes que
+                    comienzan su formación en el idioma francés.
+                </p>
+
+                <a
+                    href="programas/frances-principiante.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Intermedio</span>
+
+                <h3>Francés Intermedio</h3>
+
+                <p>
+                    Curso orientado al desarrollo y consolidación de
+                    competencias comunicativas de nivel intermedio.
+                </p>
+
+                <a
+                    href="programas/frances-intermedio.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+
+            <article class="caja-curso">
+
+                <span class="nivel">Nivel Avanzado</span>
+
+                <h3>Francés Avanzado</h3>
+
+                <p>
+                    Curso destinado a estudiantes con conocimientos
+                    consolidados que desean profundizar su dominio
+                    del idioma.
+                </p>
+
+                <a
+                    href="programas/frances-avanzado.pdf"
+                    download
+                >
+                    Enlace al programa
+                </a>
+
+            </article>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        &copy; 2026 Institución X - Proyecto de Software UNLP
+    </p>
+
+</footer>
+
+</body> </html>

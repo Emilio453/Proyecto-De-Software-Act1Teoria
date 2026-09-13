@@ -1,0 +1,1053 @@
+/* =========================================================
+estiloIA.css
+Sitio web estático - Institución X
+Proyecto de Software - UNLP
+========================================================= */
+
+/* =========================================================
+CONFIGURACIÓN GENERAL
+========================================================= */
+
+{
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+html {
+scroll-behavior: smooth;
+}
+
+body {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #f4f6f8;
+color: #20242a;
+line-height: 1.6;
+
+/*
+    Espacio superior para evitar que la navbar fija
+    tape el contenido.
+*/
+padding-top: 76px;
+
+
+}
+
+a {
+color: #0645ad;
+}
+
+a:hover {
+color: #002b6b;
+}
+
+h1,
+h2,
+h3 {
+line-height: 1.25;
+}
+
+/* =========================================================
+BARRA DE NAVEGACIÓN
+========================================================= */
+
+.navbar {
+position: fixed;
+
+top: 0;
+left: 0;
+
+width: 100%;
+min-height: 76px;
+
+background-color: #0b2d4d;
+color: white;
+
+display: flex;
+align-items: center;
+justify-content: space-between;
+
+padding: 12px 5%;
+
+z-index: 1000;
+
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+
+}
+
+/* Nombre de la institución */
+
+.logo {
+font-size: 1.35rem;
+font-weight: bold;
+
+color: #ffd43b;
+
+white-space: nowrap;
+
+
+}
+
+/* Lista de enlaces */
+
+.nav-links {
+list-style: none;
+
+display: flex;
+align-items: center;
+justify-content: flex-end;
+
+gap: 8px;
+
+
+}
+
+/* Enlaces de navegación */
+
+.nav-links a {
+display: block;
+
+color: white;
+
+text-decoration: none;
+
+font-weight: bold;
+
+padding: 10px 13px;
+
+border-radius: 5px;
+
+transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+
+
+}
+
+/* Estado hover/focus */
+
+.nav-links a:hover,
+.nav-links a:focus {
+background-color: #ffd43b;
+color: #111;
+}
+
+/* =========================================================
+CONTENIDO GENERAL
+========================================================= */
+
+.contenido-principal,
+.pagina {
+width: 90%;
+max-width: 1200px;
+
+margin: 0 auto;
+
+
+}
+
+.pagina {
+padding-top: 45px;
+padding-bottom: 60px;
+}
+
+h1 {
+font-size: 2.4rem;
+margin-bottom: 20px;
+}
+
+h2 {
+color: #0b2d4d;
+
+font-size: 1.9rem;
+
+margin-bottom: 20px;
+
+
+}
+
+h3 {
+color: #0b2d4d;
+
+font-size: 1.3rem;
+
+margin-bottom: 12px;
+
+
+}
+
+/* =========================================================
+HOME
+========================================================= */
+
+.hero {
+min-height: 480px;
+
+display: flex;
+align-items: center;
+
+background-color: #0b2d4d;
+
+color: white;
+
+padding: 60px 8%;
+
+border-bottom: 7px solid #ffd43b;
+
+
+}
+
+.hero-contenido {
+max-width: 800px;
+}
+
+.hero h1 {
+color: white;
+
+font-size: 2.8rem;
+
+margin-bottom: 20px;
+
+
+}
+
+.hero p {
+font-size: 1.1rem;
+
+margin-bottom: 18px;
+
+
+}
+
+.boton-principal {
+display: inline-block;
+
+margin-top: 15px;
+
+padding: 12px 22px;
+
+background-color: #ffd43b;
+
+color: #111;
+
+text-decoration: none;
+
+font-weight: bold;
+
+border-radius: 5px;
+
+transition: background-color 0.2s ease;
+
+
+}
+
+.boton-principal:hover {
+background-color: #ffdf68;
+
+color: #111;
+
+
+}
+
+/* Presentación */
+
+.presentacion {
+padding: 55px 0;
+}
+
+.presentacion > p {
+max-width: 850px;
+
+margin-bottom: 30px;
+
+
+}
+
+/* Tarjetas de presentación */
+
+.tarjetas-presentacion {
+display: grid;
+
+grid-template-columns: repeat(2, 1fr);
+
+gap: 25px;
+
+
+}
+
+.tarjetas-presentacion article {
+background-color: white;
+
+padding: 30px;
+
+border-left: 6px solid #ffd43b;
+
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+
+}
+
+/* =========================================================
+ENCABEZADO DE PÁGINAS
+========================================================= */
+
+.encabezado-pagina {
+margin-bottom: 35px;
+
+padding-bottom: 20px;
+
+border-bottom: 3px solid #ffd43b;
+
+
+}
+
+/* =========================================================
+SELECTOR DE CATEGORÍAS
+========================================================= */
+
+.selector-categoria {
+background-color: white;
+
+padding: 25px;
+
+margin-bottom: 35px;
+
+border: 1px solid #d2d7dc;
+
+border-left: 6px solid #ffd43b;
+
+border-radius: 5px;
+
+
+}
+
+.selector-categoria h2 {
+margin-bottom: 20px;
+}
+
+/*
+Contenedor de las opciones Inglés / Francés.
+*/
+
+.opciones-categoria {
+display: flex;
+
+gap: 15px;
+
+flex-wrap: wrap;
+
+
+}
+
+/*
+Ocultamos visualmente los radio buttons.
+
+Los <label> funcionan como botones.
+
+
+*/
+
+.opciones-categoria input[type="radio"] {
+position: absolute;
+
+opacity: 0;
+
+pointer-events: none;
+
+
+}
+
+/*
+Botones visuales de las categorías.
+*/
+
+.opciones-categoria label {
+display: block;
+
+min-width: 160px;
+
+padding: 13px 25px;
+
+background-color: #e9edf1;
+
+color: #0b2d4d;
+
+border: 2px solid #0b2d4d;
+
+border-radius: 5px;
+
+text-align: center;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition:
+    background-color 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+
+
+}
+
+/*
+Efecto al pasar el mouse.
+*/
+
+.opciones-categoria label:hover {
+background-color: #ffd43b;
+
+color: #111;
+
+
+}
+
+/*
+Categoría Inglés seleccionada.
+*/
+
+#opcion-ingles:checked + label {
+background-color: #ffd43b;
+
+color: #111;
+
+border-color: #0b2d4d;
+
+
+}
+
+/*
+Categoría Francés seleccionada.
+*/
+
+#opcion-frances:checked + label {
+background-color: #ffd43b;
+
+color: #111;
+
+border-color: #0b2d4d;
+
+
+}
+
+/* =========================================================
+CAMBIO DE CATÁLOGO SIN JAVASCRIPT
+========================================================= */
+
+/*
+Por defecto se muestra Inglés.
+*/
+
+#catalogo-ingles {
+display: block;
+}
+
+#catalogo-frances {
+display: none;
+}
+
+/*
+Cuando se selecciona Francés:
+
+- Se oculta el catálogo de Inglés.
+- Se muestra el catálogo de Francés.
+
+
+*/
+
+body:has(#opcion-frances:checked) #catalogo-ingles {
+display: none;
+}
+
+body:has(#opcion-frances:checked) #catalogo-frances {
+display: block;
+}
+
+/*
+Cuando se selecciona Inglés:
+
+- Se muestra el catálogo de Inglés.
+- Se oculta el catálogo de Francés.
+
+
+*/
+
+body:has(#opcion-ingles:checked) #catalogo-ingles {
+display: block;
+}
+
+body:has(#opcion-ingles:checked) #catalogo-frances {
+display: none;
+}
+
+/* =========================================================
+CATEGORÍAS DEL CATÁLOGO
+========================================================= */
+
+.catalogo-categoria {
+margin-bottom: 55px;
+}
+
+/*
+Encabezado de cada categoría.
+*/
+
+.titulo-categoria {
+margin-bottom: 25px;
+}
+
+.titulo-categoria h2 {
+padding: 12px 18px;
+
+margin-bottom: 10px;
+
+background-color: #0b2d4d;
+
+color: white;
+
+border-left: 7px solid #ffd43b;
+
+
+}
+
+.titulo-categoria p {
+color: #444;
+}
+
+/* =========================================================
+CONTENEDOR DE CURSOS
+========================================================= */
+
+.contenedor-cursos {
+display: grid;
+
+grid-template-columns: repeat(3, 1fr);
+
+gap: 25px;
+
+
+}
+
+/* =========================================================
+CAJAS DE CURSOS
+========================================================= */
+
+.caja-curso {
+background-color: white;
+
+/*
+    Borde amarillo solicitado.
+*/
+border: 3px solid #ffd43b;
+
+border-radius: 7px;
+
+/*
+    Padding suficiente para que el contenido
+    no quede pegado al borde.
+*/
+padding: 28px;
+
+min-height: 245px;
+
+display: flex;
+
+flex-direction: column;
+
+box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+
+
+}
+
+/*
+Pequeño efecto visual al pasar el mouse.
+*/
+
+.caja-curso:hover {
+transform: translateY(-3px);
+
+box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+
+
+}
+
+/*
+Título del curso.
+*/
+
+.caja-curso h3 {
+color: #0b2d4d;
+
+font-size: 1.3rem;
+
+margin-top: 8px;
+
+margin-bottom: 15px;
+
+
+}
+
+/*
+Descripción del curso.
+*/
+
+.caja-curso p {
+margin-bottom: 20px;
+
+color: #444;
+
+
+}
+
+/*
+Enlace al programa PDF.
+*/
+
+.caja-curso a {
+display: inline-block;
+
+margin-top: auto;
+
+padding: 8px 0;
+
+color: #0645ad;
+
+font-weight: bold;
+
+text-decoration: underline;
+
+
+}
+
+.caja-curso a:hover {
+color: #002b6b;
+}
+
+/* =========================================================
+INDICADOR DE NIVEL
+========================================================= */
+
+.nivel {
+display: inline-block;
+
+align-self: flex-start;
+
+padding: 5px 10px;
+
+background-color: #e9edf1;
+
+color: #0b2d4d;
+
+border-radius: 4px;
+
+font-size: 0.85rem;
+
+font-weight: bold;
+
+
+}
+
+/* =========================================================
+FORMULARIO DE CONTACTO
+========================================================= */
+
+.formulario-seccion {
+max-width: 700px;
+
+margin: 20px auto;
+
+padding: 40px;
+
+background-color: white;
+
+border-top: 6px solid #ffd43b;
+
+box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.formulario-seccion > p {
+margin-bottom: 25px;
+}
+
+/*
+Formulario.
+*/
+
+form {
+display: flex;
+
+flex-direction: column;
+
+gap: 20px;
+
+
+}
+
+/*
+Cada campo.
+*/
+
+.campo {
+display: flex;
+
+flex-direction: column;
+
+gap: 7px;
+
+
+}
+
+/*
+Etiquetas.
+*/
+
+.campo label {
+font-weight: bold;
+
+color: #0b2d4d;
+
+
+}
+
+/*
+Campos de entrada.
+*/
+
+.campo input {
+width: 100%;
+
+padding: 12px;
+
+font-size: 1rem;
+
+border: 1px solid #9ba4ad;
+
+border-radius: 4px;
+
+background-color: #fff;
+
+
+}
+
+/*
+Estado de foco.
+*/
+
+.campo input:focus {
+outline: 3px solid rgba(255, 212, 59, 0.45);
+
+border-color: #0b2d4d;
+
+
+}
+
+/*
+Botón enviar.
+*/
+
+button {
+padding: 13px 20px;
+
+border: none;
+
+border-radius: 5px;
+
+background-color: #0b2d4d;
+
+color: white;
+
+font-size: 1rem;
+
+font-weight: bold;
+
+cursor: pointer;
+
+transition: background-color 0.2s ease;
+
+
+}
+
+button:hover {
+background-color: #164d7c;
+}
+
+button:focus {
+outline: 3px solid rgba(255, 212, 59, 0.6);
+}
+
+/*
+Nota debajo del formulario.
+*/
+
+.nota-formulario {
+margin-top: 25px;
+
+color: #666;
+
+font-size: 0.9rem;
+
+
+}
+
+/* =========================================================
+INFORMACIÓN DE MANTENIMIENTO
+========================================================= */
+
+.mantenimiento {
+max-width: 850px;
+
+margin: 20px auto;
+
+padding: 40px;
+
+background-color: white;
+
+border-left: 7px solid #ffd43b;
+
+box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+
+
+}
+
+.mantenimiento p {
+margin-bottom: 20px;
+}
+
+/* =========================================================
+FOOTER
+========================================================= */
+
+footer {
+background-color: #20242a;
+
+color: white;
+
+text-align: center;
+
+padding: 25px;
+
+margin-top: 20px;
+
+
+}
+
+footer p {
+font-size: 0.9rem;
+}
+
+/* =========================================================
+RESPONSIVE - TABLETS
+========================================================= */
+
+@media (max-width: 900px) {
+
+/*
+    La navbar pasa a ocupar dos líneas
+    cuando no hay suficiente espacio.
+*/
+
+.navbar {
+    flex-direction: column;
+
+    gap: 8px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+/*
+    Aumentamos el espacio superior del body
+    porque la navbar ahora es más alta.
+*/
+
+body {
+    padding-top: 125px;
+}
+
+
+.nav-links {
+    flex-wrap: wrap;
+
+    justify-content: center;
+}
+
+
+.nav-links a {
+    padding: 8px 10px;
+
+    font-size: 0.9rem;
+}
+
+
+/*
+    Dos cursos por fila en tablets.
+*/
+
+.contenedor-cursos {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.hero h1 {
+    font-size: 2.3rem;
+}
+
+
+}
+
+/* =========================================================
+RESPONSIVE - CELULARES
+========================================================= */
+
+@media (max-width: 600px) {
+
+/*
+    Navbar vertical en celulares.
+*/
+
+body {
+    padding-top: 185px;
+}
+
+
+.navbar {
+    padding: 10px 4%;
+}
+
+
+.logo {
+    font-size: 1.15rem;
+}
+
+
+.nav-links {
+    width: 100%;
+
+    flex-direction: column;
+
+    gap: 2px;
+}
+
+
+.nav-links li {
+    width: 100%;
+
+    text-align: center;
+}
+
+
+.nav-links a {
+    width: 100%;
+
+    padding: 7px;
+}
+
+
+/*
+    Contenido con márgenes reducidos.
+*/
+
+.contenido-principal,
+.pagina {
+    width: 92%;
+}
+
+
+/*
+    Home.
+*/
+
+.hero {
+    min-height: auto;
+
+    padding: 45px 25px;
+}
+
+
+.hero h1 {
+    font-size: 2rem;
+}
+
+
+h1 {
+    font-size: 2rem;
+}
+
+
+h2 {
+    font-size: 1.6rem;
+}
+
+
+/*
+    Una tarjeta por fila.
+*/
+
+.tarjetas-presentacion,
+.contenedor-cursos {
+    grid-template-columns: 1fr;
+}
+
+
+/*
+    Selector de categorías vertical.
+*/
+
+.opciones-categoria {
+    flex-direction: column;
+}
+
+
+.opciones-categoria label {
+    width: 100%;
+}
+
+
+/*
+    Las cajas dejan de tener una altura mínima
+    rígida en pantallas pequeñas.
+*/
+
+.caja-curso {
+    min-height: auto;
+
+    padding: 25px;
+}
+
+
+/*
+    Formulario y mantenimiento.
+*/
+
+.formulario-seccion,
+.mantenimiento {
+    padding: 25px;
+}
+
+
+}
+
+/* =========================================================
+ACCESIBILIDAD
+========================================================= */
+
+/*
+Permite identificar visualmente la opción seleccionada
+mediante teclado.
+*/
+
+.opciones-categoria input[type="radio"]:focus + label {
+outline: 3px solid rgba(255, 212, 59, 0.7);
+
+outline-offset: 3px;
+
+
+}

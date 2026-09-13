@@ -1,0 +1,437 @@
+/* =========================================================
+   estiloIA.css
+   Instituto X - Sitio de cursos (Inglés / Francés)
+   Paleta: azul institucional, amarillo de acento, negro/grises
+   ========================================================= */
+
+:root {
+  --azul-oscuro: #12305a;
+  --azul: #1c4a86;
+  --amarillo: #e0b800;
+  --amarillo-suave: #f5d94e;
+  --negro: #1c1c1c;
+  --gris-oscuro: #333333;
+  --gris-medio: #6b6b6b;
+  --gris-claro: #e9e9e9;
+  --blanco: #ffffff;
+  --fondo: #f7f7f5;
+  --radio: 8px;
+  --sombra: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Verdana, Arial, sans-serif;
+  background-color: var(--fondo);
+  color: var(--gris-oscuro);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* =========================================================
+   Barra de navegación: horizontal, fija y responsiva
+   ========================================================= */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: var(--azul-oscuro);
+  box-shadow: var(--sombra);
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+.navbar-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.7rem 0;
+}
+
+.navbar-brand {
+  color: var(--amarillo);
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-decoration: none;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.navbar-brand span {
+  color: var(--blanco);
+  font-weight: 400;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  display: inline-block;
+  color: var(--blanco);
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0.55rem 0.9rem;
+  border-radius: var(--radio);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.navbar-links li a:hover,
+.navbar-links li a:focus {
+  background-color: var(--amarillo);
+  color: var(--negro);
+}
+
+.navbar-links li a.activo {
+  background-color: var(--amarillo-suave);
+  color: var(--negro);
+  font-weight: 600;
+}
+
+/* Espaciador para compensar la navbar fija */
+.espaciador-navbar {
+  height: 88px;
+}
+
+@media (max-width: 640px) {
+  .navbar-inner {
+    justify-content: center;
+    text-align: center;
+  }
+  .navbar-links {
+    justify-content: center;
+    width: 100%;
+  }
+  .espaciador-navbar {
+    height: 118px;
+  }
+}
+
+/* =========================================================
+   Estructura general de página
+   ========================================================= */
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 4rem;
+}
+
+footer {
+  background-color: var(--negro);
+  color: var(--gris-claro);
+  text-align: center;
+  padding: 1.25rem 1rem;
+  font-size: 0.85rem;
+}
+
+footer a {
+  color: var(--amarillo-suave);
+}
+
+h1, h2, h3 {
+  color: var(--azul-oscuro);
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2rem;
+  border-bottom: 3px solid var(--amarillo);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
+h2 {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+}
+
+a {
+  color: var(--azul);
+}
+
+/* =========================================================
+   Home
+   ========================================================= */
+
+.hero {
+  background: linear-gradient(135deg, var(--azul-oscuro), var(--azul));
+  color: var(--blanco);
+  border-radius: var(--radio);
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.hero h1 {
+  color: var(--blanco);
+  border-bottom-color: var(--amarillo);
+}
+
+.hero p {
+  font-size: 1.05rem;
+  max-width: 750px;
+}
+
+.tarjetas-inicio {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.tarjeta-inicio {
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  border-top: 4px solid var(--amarillo);
+  border-radius: var(--radio);
+  padding: 1.5rem;
+  box-shadow: var(--sombra);
+}
+
+.tarjeta-inicio h3 {
+  margin-top: 0;
+}
+
+.tarjeta-inicio a {
+  display: inline-block;
+  margin-top: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.tarjeta-inicio a:hover {
+  text-decoration: underline;
+}
+
+/* =========================================================
+   Formulario de contacto
+   ========================================================= */
+
+.formulario-contacto {
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  border-radius: var(--radio);
+  padding: 2rem;
+  max-width: 560px;
+  box-shadow: var(--sombra);
+}
+
+.campo {
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  color: var(--azul-oscuro);
+}
+
+.campo input {
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #cfcfcf;
+  border-radius: var(--radio);
+  font-size: 1rem;
+  font-family: inherit;
+  background-color: var(--fondo);
+}
+
+.campo input:focus {
+  outline: 2px solid var(--amarillo);
+  outline-offset: 1px;
+  border-color: var(--azul);
+}
+
+.boton-enviar {
+  background-color: var(--amarillo);
+  color: var(--negro);
+  border: none;
+  padding: 0.75rem 1.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: var(--radio);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.boton-enviar:hover {
+  background-color: var(--amarillo-suave);
+}
+
+/* =========================================================
+   Página de mantenimiento / información institucional
+   ========================================================= */
+
+.info-mantenimiento {
+  background-color: var(--blanco);
+  border: 1px solid var(--gris-claro);
+  border-left: 6px solid var(--azul);
+  border-radius: var(--radio);
+  padding: 2rem;
+  box-shadow: var(--sombra);
+}
+
+.info-mantenimiento dl {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.5rem 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.info-mantenimiento dt {
+  font-weight: 700;
+  color: var(--azul-oscuro);
+}
+
+.info-mantenimiento dd {
+  margin: 0;
+}
+
+/* =========================================================
+   Catálogo de cursos
+   ========================================================= */
+
+.selector-categoria {
+  margin-bottom: 2rem;
+}
+
+.selector-categoria summary {
+  cursor: pointer;
+  list-style: none;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  font-weight: 700;
+  font-size: 1.05rem;
+  padding: 0.9rem 1.25rem;
+  border-radius: var(--radio);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--sombra);
+}
+
+.selector-categoria summary::-webkit-details-marker {
+  display: none;
+}
+
+.selector-categoria summary::after {
+  content: "▾";
+  color: var(--amarillo);
+  font-size: 1.1rem;
+  margin-left: 0.75rem;
+  transition: transform 0.2s ease;
+}
+
+.selector-categoria[open] summary::after {
+  transform: rotate(180deg);
+}
+
+.selector-categoria summary:hover {
+  background-color: var(--azul);
+}
+
+.panel-cursos {
+  border: 1px solid var(--gris-claro);
+  border-top: none;
+  border-radius: 0 0 var(--radio) var(--radio);
+  padding: 1.5rem;
+  background-color: var(--blanco);
+}
+
+.grilla-cursos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Cajas de curso: borde amarillo y padding generoso, como pide la consigna */
+.caja-curso {
+  border: 2px solid var(--amarillo);
+  border-radius: var(--radio);
+  padding: 1.5rem 1.5rem;
+  background-color: var(--blanco);
+  box-shadow: var(--sombra);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.caja-curso h3 {
+  margin: 0 0 0.75rem 0;
+  color: var(--azul-oscuro);
+  font-size: 1.15rem;
+}
+
+.caja-curso .nivel {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: var(--gris-claro);
+  color: var(--gris-oscuro);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  margin-bottom: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.caja-curso .enlace-programa {
+  display: inline-block;
+  margin-top: auto;
+  padding: 0.6rem 1rem;
+  background-color: var(--azul-oscuro);
+  color: var(--blanco);
+  text-decoration: none;
+  border-radius: var(--radio);
+  font-weight: 600;
+  font-size: 0.92rem;
+  text-align: center;
+  transition: background-color 0.2s ease;
+}
+
+.caja-curso .enlace-programa:hover {
+  background-color: var(--amarillo);
+  color: var(--negro);
+}
+
+/* =========================================================
+   Responsivo general
+   ========================================================= */
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+  .hero {
+    padding: 2rem 1.25rem;
+  }
+  .formulario-contacto,
+  .info-mantenimiento {
+    padding: 1.25rem;
+  }
+}
